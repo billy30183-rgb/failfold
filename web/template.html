@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; worker-src blob:; connect-src 'none'; img-src data:; base-uri 'none'; form-action 'none'">
+<title>FailFold — Same failures. Less rereading.</title>
+<meta name="description" content="Group matching JUnit failures, compare a supplied baseline and export every original failure record. Local processing, no account or uploads.">
+<style>/*__STYLE__*/</style></head><body>
+<header><div class="brand"><span class="logo" aria-hidden="true">≋</span> FailFold <span class="version">0.1.0</span></div><span class="privacy"><span aria-hidden="true">●</span> LOCAL PROCESSING · NO UPLOADS</span></header>
+<main>
+<section class="hero"><div><div class="eyebrow">THE FAILURE TRIAGE WORKBENCH</div><h1>Same failures.<br><span>Less rereading.</span></h1><p class="lead">Turn repeated JUnit failures into a small, inspectable reading list. Keep every record. See what is new relative to your baseline.</p><div class="hero-actions"><button class="primary" id="demo">Try the 240 → 3 demo <span aria-hidden="true">↗</span></button><span class="muted">Synthetic reports. Real analysis.</span></div></div><aside class="principle"><span class="eyebrow">BUILT FOR EVIDENCE</span><p class="quote">“Same signature”<br>is not<br>“same root cause.”</p><p>FailFold makes the comparison visible. It never invents a diagnosis or silently discards a failure.</p></aside></section>
+<section class="inputs" aria-label="Report selection">
+<label class="drop" id="current-drop"><span class="eyebrow">01 / CURRENT REPORTS</span><strong>Drop your JUnit XML files here</strong><span class="muted" id="current-label">or choose files · multiple reports supported</span><input id="current" type="file" accept=".xml,application/xml,text/xml" multiple aria-label="Current JUnit reports"></label>
+<label class="drop baseline" id="baseline-drop"><span class="eyebrow">02 / BASELINE · OPTIONAL</span><strong>Compare with an earlier run</strong><span class="muted" id="baseline-label">Choose XML files from a comparable run</span><input id="baseline" type="file" accept=".xml,application/xml,text/xml" multiple aria-label="Baseline JUnit reports"></label>
+</section>
+<div class="settings"><label>Matching <select id="mode"><option value="exact">Exact parsed text</option><option value="formatting">Ignore ANSI colors & trailing whitespace</option></select></label><label>Grouping <select id="scope"><option value="all">Across test classes</option><option value="class">Within each test class</option></select></label><button id="clear-baseline" class="text-button">Clear baseline</button><button id="reset" class="text-button">Clear all</button><button id="cancel" hidden>Cancel analysis</button></div>
+<p class="small limits">UTF-8 XML only. 5 MiB per file, 20 MiB / 100 files combined, 50,000 testcase and failure records combined. No ZIP archives. No automatic redaction.</p>
+<div id="status" role="status" aria-live="polite">Choose reports or try the synthetic demo. Nothing is stored between sessions.</div>
+<section id="results" hidden>
+<div class="metric-grid"><div class="metric"><span>FAILURE / ERROR RECORDS</span><strong id="metric-records">0</strong><small id="metric-tests"></small></div><div class="metric accent"><span>SIGNATURE GROUPS</span><strong id="metric-groups">0</strong><small>Inspect one signature, expand every occurrence</small></div><div class="metric"><span>REPETITION FOLDED</span><strong id="metric-folded">0%</strong><small id="metric-folded-count"></small></div><div class="metric"><span>NEW VS. BASELINE</span><strong id="metric-new">—</strong><small>Only relative to reports you supplied</small></div></div>
+<div id="warning-box" class="warning" hidden></div>
+<div class="toolbar"><div><h2>Failure reading list</h2><span id="group-count" class="muted"></span></div><div class="exports"><button id="download-md">Export Markdown</button><button id="download-json">Export all JSON</button></div></div>
+<p class="small">Exports include original failure text and may contain secrets. Review before sharing. Group counts are not root-cause counts or measured time savings.</p>
+<div class="filters"><input id="search" type="search" placeholder="Search messages, tests or source files…" aria-label="Search failure groups"><select id="filter" aria-label="Filter groups"><option value="all">All current groups</option><option value="new">New vs. baseline</option><option value="seen">Seen in baseline</option><option value="unknown">Insufficient evidence</option></select></div>
+<div id="groups"></div><button id="more-groups" hidden>Show more groups</button>
+<details id="baseline-only"><summary id="baseline-only-title">Baseline-only signatures</summary><p class="small">These were not observed in the current reports. A missing test, changed coverage or incomplete run can explain this. They are not marked fixed.</p><div id="absent-groups"></div></details>
+</section>
+<footer><strong>Local by design. Conservative by default.</strong><p>Matching uses the result kind, exception type, full message and full trace. No numeric masking, AI service, analytics or account. XML-decoded failure text is retained; stdout, properties and attachments are not included in exports.</p><details><summary>License & third-party notices</summary><pre id="license-notices">/*__NOTICES__*/</pre></details></footer>
+</main>
+<script type="application/json" id="worker-source">/*__WORKER__*/</script>
+<script>/*__APP__*/</script>
+</body></html>

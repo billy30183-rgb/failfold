@@ -1,0 +1,422 @@
+
+> @billy30183-rgb/failfold@0.1.0 test
+> node --test tests/core.test.js tests/cli.test.js
+
+TAP version 13
+# Subtest: CLI help needs no files
+ok 1 - CLI help needs no files
+  ---
+  duration_ms: 46.34679
+  type: 'test'
+  ...
+# Subtest: CLI no args returns usage error
+ok 2 - CLI no args returns usage error
+  ---
+  duration_ms: 72.317076
+  type: 'test'
+  ...
+# Subtest: CLI produces actual JSON and Markdown
+ok 3 - CLI produces actual JSON and Markdown
+  ---
+  duration_ms: 55.544284
+  type: 'test'
+  ...
+# Subtest: CLI gate exits 1 for new signature
+ok 4 - CLI gate exits 1 for new signature
+  ---
+  duration_ms: 42.633546
+  type: 'test'
+  ...
+# Subtest: CLI gate requires baseline
+ok 5 - CLI gate requires baseline
+  ---
+  duration_ms: 42.539286
+  type: 'test'
+  ...
+# Subtest: CLI gate exits 2 for uninformative evidence
+ok 6 - CLI gate exits 2 for uninformative evidence
+  ---
+  duration_ms: 42.93412
+  type: 'test'
+  ...
+# Subtest: CLI failure gate exits 1 even without baseline
+ok 7 - CLI failure gate exits 1 even without baseline
+  ---
+  duration_ms: 41.205727
+  type: 'test'
+  ...
+# Subtest: CLI will not overwrite existing outputs by default
+ok 8 - CLI will not overwrite existing outputs by default
+  ---
+  duration_ms: 38.338142
+  type: 'test'
+  ...
+# Subtest: CLI explicit force only overwrites designated output
+ok 9 - CLI explicit force only overwrites designated output
+  ---
+  duration_ms: 42.341204
+  type: 'test'
+  ...
+# Subtest: CLI never overwrites an input, even with force
+ok 10 - CLI never overwrites an input, even with force
+  ---
+  duration_ms: 38.430208
+  type: 'test'
+  ...
+# Subtest: CLI hard-link output cannot overwrite source
+ok 11 - CLI hard-link output cannot overwrite source
+  ---
+  duration_ms: 41.337222
+  type: 'test'
+  ...
+# Subtest: CLI duplicate source path rejected
+ok 12 - CLI duplicate source path rejected
+  ---
+  duration_ms: 40.584009
+  type: 'test'
+  ...
+# Subtest: CLI output paths must differ
+ok 13 - CLI output paths must differ
+  ---
+  duration_ms: 39.750247
+  type: 'test'
+  ...
+# Subtest: CLI malformed XML leaves no report artifact
+ok 14 - CLI malformed XML leaves no report artifact
+  ---
+  duration_ms: 42.469735
+  type: 'test'
+  ...
+# Subtest: CLI rejects invalid UTF-8
+ok 15 - CLI rejects invalid UTF-8
+  ---
+  duration_ms: 40.103009
+  type: 'test'
+  ...
+# Subtest: CLI recursively finds only XML files in a selected directory
+ok 16 - CLI recursively finds only XML files in a selected directory
+  ---
+  duration_ms: 42.114009
+  type: 'test'
+  ...
+# Subtest: CLI empty reports directory is not successful analysis
+ok 17 - CLI empty reports directory is not successful analysis
+  ---
+  duration_ms: 38.457138
+  type: 'test'
+  ...
+# Subtest: CLI supports names with spaces and Unicode
+ok 18 - CLI supports names with spaces and Unicode
+  ---
+  duration_ms: 43.42835
+  type: 'test'
+  ...
+# Subtest: actual Node JUnit exporter output can be analyzed
+ok 19 - actual Node JUnit exporter output can be analyzed
+  ---
+  duration_ms: 125.979751
+  type: 'test'
+  ...
+# Subtest: synthetic demo: 240 failures, 3 groups, 1 new, all evidence retained
+ok 20 - synthetic demo: 240 failures, 3 groups, 1 new, all evidence retained
+  ---
+  duration_ms: 23.818147
+  type: 'test'
+  ...
+# Subtest: passed and skipped do not enter failure groups
+ok 21 - passed and skipped do not enter failure groups
+  ---
+  duration_ms: 0.417757
+  type: 'test'
+  ...
+# Subtest: multiple failure elements count records, not duplicated cases
+ok 22 - multiple failure elements count records, not duplicated cases
+  ---
+  duration_ms: 0.708497
+  type: 'test'
+  ...
+# Subtest: error and failure with otherwise identical text stay separate
+ok 23 - error and failure with otherwise identical text stay separate
+  ---
+  duration_ms: 0.265272
+  type: 'test'
+  ...
+# Subtest: suite counters are never added on top of child results
+ok 24 - suite counters are never added on top of child results
+  ---
+  duration_ms: 0.430196
+  type: 'test'
+  ...
+# Subtest: nested suite and namespace parsing preserves test ancestry
+ok 25 - nested suite and namespace parsing preserves test ancestry
+  ---
+  duration_ms: 0.391568
+  type: 'test'
+  ...
+# Subtest: CDATA and escaped entities are decoded but not executed
+ok 26 - CDATA and escaped entities are decoded but not executed
+  ---
+  duration_ms: 0.723588
+  type: 'test'
+  ...
+# Subtest: BOM and CRLF XML load successfully
+ok 27 - BOM and CRLF XML load successfully
+  ---
+  duration_ms: 0.421352
+  type: 'test'
+  ...
+# Subtest: unknown encoding is rejected
+ok 28 - unknown encoding is rejected
+  ---
+  duration_ms: 0.575239
+  type: 'test'
+  ...
+# Subtest: malformed XML is rejected rather than repaired
+ok 29 - malformed XML is rejected rather than repaired
+  ---
+  duration_ms: 0.556772
+  type: 'test'
+  ...
+# Subtest: duplicate XML attributes are rejected
+ok 30 - duplicate XML attributes are rejected
+  ---
+  duration_ms: 0.219173
+  type: 'test'
+  ...
+# Subtest: DTD and external entity declaration rejected
+ok 31 - DTD and external entity declaration rejected
+  ---
+  duration_ms: 0.106828
+  type: 'test'
+  ...
+# Subtest: entity expansion declarations rejected
+ok 32 - entity expansion declarations rejected
+  ---
+  duration_ms: 0.089693
+  type: 'test'
+  ...
+# Subtest: bare entity reference rejected
+ok 33 - bare entity reference rejected
+  ---
+  duration_ms: 0.185344
+  type: 'test'
+  ...
+# Subtest: non JUnit roots rejected
+ok 34 - non JUnit roots rejected
+  ---
+  duration_ms: 0.228477
+  type: 'test'
+  ...
+# Subtest: empty XML rejected
+ok 35 - empty XML rejected
+  ---
+  duration_ms: 0.131264
+  type: 'test'
+  ...
+# Subtest: no current reports rejected
+ok 36 - no current reports rejected
+  ---
+  duration_ms: 0.119746
+  type: 'test'
+  ...
+# Subtest: empty baseline selection rejected
+ok 37 - empty baseline selection rejected
+  ---
+  duration_ms: 0.12874
+  type: 'test'
+  ...
+# Subtest: file count limit combines current and baseline
+ok 38 - file count limit combines current and baseline
+  ---
+  duration_ms: 0.238402
+  type: 'test'
+  ...
+# Subtest: per-file byte limit enforced
+ok 39 - per-file byte limit enforced
+  ---
+  duration_ms: 4.451515
+  type: 'test'
+  ...
+# Subtest: deep ignored metadata is still bounded
+ok 40 - deep ignored metadata is still bounded
+  ---
+  duration_ms: 0.87307
+  type: 'test'
+  ...
+# Subtest: missing failure evidence in summary is not shown as green
+ok 41 - missing failure evidence in summary is not shown as green
+  ---
+  duration_ms: 0.278181
+  type: 'test'
+  ...
+# Subtest: summary declaring more failures than parsed is rejected
+ok 42 - summary declaring more failures than parsed is rejected
+  ---
+  duration_ms: 0.294575
+  type: 'test'
+  ...
+# Subtest: declared testcase count mismatch is a warning
+ok 43 - declared testcase count mismatch is a warning
+  ---
+  duration_ms: 0.32453
+  type: 'test'
+  ...
+# Subtest: unsupported suite-level failures rejected
+ok 44 - unsupported suite-level failures rejected
+  ---
+  duration_ms: 0.292031
+  type: 'test'
+  ...
+# Subtest: unsupported retry extensions rejected instead of passed
+ok 45 - unsupported retry extensions rejected instead of passed
+  ---
+  duration_ms: 0.231282
+  type: 'test'
+  ...
+# Subtest: unrecognized wrapper children rejected
+ok 46 - unrecognized wrapper children rejected
+  ---
+  duration_ms: 0.321014
+  type: 'test'
+  ...
+# Subtest: markup nested inside failure rejected rather than text flattened
+ok 47 - markup nested inside failure rejected rather than text flattened
+  ---
+  duration_ms: 0.229278
+  type: 'test'
+  ...
+# Subtest: skipped plus failure counts as failing with a warning
+ok 48 - skipped plus failure counts as failing with a warning
+  ---
+  duration_ms: 0.249648
+  type: 'test'
+  ...
+# Subtest: identical messages with differing traces are not merged
+ok 49 - identical messages with differing traces are not merged
+  ---
+  duration_ms: 0.318851
+  type: 'test'
+  ...
+# Subtest: numeric status codes are never erased
+ok 50 - numeric status codes are never erased
+  ---
+  duration_ms: 0.478997
+  type: 'test'
+  ...
+# Subtest: paths and source line numbers are not erased
+ok 51 - paths and source line numbers are not erased
+  ---
+  duration_ms: 0.329046
+  type: 'test'
+  ...
+# Subtest: formatting mode is opt-in and retains raw variants
+ok 52 - formatting mode is opt-in and retains raw variants
+  ---
+  duration_ms: 0.665843
+  type: 'test'
+  ...
+# Subtest: ANSI color normalization is deliberately limited to SGR
+ok 53 - ANSI color normalization is deliberately limited to SGR
+  ---
+  duration_ms: 0.106567
+  type: 'test'
+  ...
+# Subtest: class-scoped grouping can split otherwise matching groups
+ok 54 - class-scoped grouping can split otherwise matching groups
+  ---
+  duration_ms: 0.610131
+  type: 'test'
+  ...
+# Subtest: uninformative failures stay separate and uncomparable
+ok 55 - uninformative failures stay separate and uncomparable
+  ---
+  duration_ms: 0.47445
+  type: 'test'
+  ...
+# Subtest: no baseline does not pretend every group is new
+ok 56 - no baseline does not pretend every group is new
+  ---
+  duration_ms: 0.295987
+  type: 'test'
+  ...
+# Subtest: known-passing baseline makes current signature new
+ok 57 - known-passing baseline makes current signature new
+  ---
+  duration_ms: 0.315976
+  type: 'test'
+  ...
+# Subtest: same failure in another testcase is seen, not claimed regression-free
+ok 58 - same failure in another testcase is seen, not claimed regression-free
+  ---
+  duration_ms: 0.330368
+  type: 'test'
+  ...
+# Subtest: identical files from different jobs preserved with duplicate warning
+ok 59 - identical files from different jobs preserved with duplicate warning
+  ---
+  duration_ms: 0.423376
+  type: 'test'
+  ...
+# Subtest: file input ordering does not affect deterministic report
+ok 60 - file input ordering does not affect deterministic report
+  ---
+  duration_ms: 40.538642
+  type: 'test'
+  ...
+# Subtest: fences cannot be broken by hostile Markdown
+ok 61 - fences cannot be broken by hostile Markdown
+  ---
+  duration_ms: 0.30461
+  type: 'test'
+  ...
+# Subtest: JSON and Markdown contain every occurrence
+ok 62 - JSON and Markdown contain every occurrence
+  ---
+  duration_ms: 19.8251
+  type: 'test'
+  ...
+# Subtest: invalid normalization options rejected
+ok 63 - invalid normalization options rejected
+  ---
+  duration_ms: 0.146216
+  type: 'test'
+  ...
+# Subtest: nested incomplete summary cannot hide behind a wrapper
+ok 64 - nested incomplete summary cannot hide behind a wrapper
+  ---
+  duration_ms: 0.20962
+  type: 'test'
+  ...
+# Subtest: nested empty failure summary rejected
+ok 65 - nested empty failure summary rejected
+  ---
+  duration_ms: 0.158063
+  type: 'test'
+  ...
+# Subtest: invalid declared counters are rejected
+ok 66 - invalid declared counters are rejected
+  ---
+  duration_ms: 0.158384
+  type: 'test'
+  ...
+# Subtest: duplicate source labels within a set rejected
+ok 67 - duplicate source labels within a set rejected
+  ---
+  duration_ms: 0.306303
+  type: 'test'
+  ...
+# Subtest: same label allowed in separate current and baseline sets
+ok 68 - same label allowed in separate current and baseline sets
+  ---
+  duration_ms: 0.214997
+  type: 'test'
+  ...
+1..68
+# tests 68
+# suites 0
+# pass 68
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 969.853323

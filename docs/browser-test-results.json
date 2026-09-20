@@ -1,0 +1,74 @@
+{
+  "passed": 17,
+  "harness": "file URL navigation then offline",
+  "results": [
+    {
+      "name": "standalone HTML runs with network disabled (see harness metadata)",
+      "passed": true
+    },
+    {
+      "name": "synthetic demo produces 240 -> 3 with one new signature",
+      "passed": true
+    },
+    {
+      "name": "group and original occurrence details expand with paginated evidence",
+      "passed": true
+    },
+    {
+      "name": "search and relative-baseline filters work",
+      "passed": true
+    },
+    {
+      "name": "baseline-only signature is not mislabeled as fixed",
+      "passed": true
+    },
+    {
+      "name": "browser JSON and Markdown are identical to Node core exports",
+      "passed": true
+    },
+    {
+      "name": "clearing baseline removes unsupported new/fixed classifications",
+      "passed": true
+    },
+    {
+      "name": "local upload and opt-in formatting preserve both original variants",
+      "passed": true
+    },
+    {
+      "name": "hostile failure text is displayed as text without script or network execution",
+      "passed": true
+    },
+    {
+      "name": "invalid replacement input clears stale results and fails closed",
+      "passed": true
+    },
+    {
+      "name": "DTD input is rejected before analysis",
+      "passed": true
+    },
+    {
+      "name": "blank failures are not merged and carry unknown evidence status",
+      "passed": true
+    },
+    {
+      "name": "file size guard rejects oversized reports before parsing",
+      "passed": true
+    },
+    {
+      "name": "worker cancellation leaves no partial report",
+      "passed": true
+    },
+    {
+      "name": "390px mobile viewport has no horizontal page overflow",
+      "passed": true
+    },
+    {
+      "name": "clear all releases selected report state",
+      "passed": true
+    },
+    {
+      "name": "entire acceptance run has zero external requests and zero page errors",
+      "passed": true
+    }
+  ]
+}

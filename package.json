@@ -1,0 +1,21 @@
+{
+  "name": "@billy30183-rgb/failfold",
+  "version": "0.1.0",
+  "description": "Local-first, evidence-preserving JUnit failure grouping and baseline comparison.",
+  "type": "commonjs",
+  "license": "MIT",
+  "private": true,
+  "engines": {
+    "node": ">=22"
+  },
+  "bin": {
+    "failfold": "src/cli.js"
+  },
+  "scripts": {
+    "test": "node --test tests/core.test.js tests/cli.test.js tests/ui-lifecycle.test.js",
+    "build": "node scripts/build.js",
+    "demo": "node src/cli.js examples/current --baseline examples/baseline",
+    "test:browser": "python scripts/browser_test.py",
+    "benchmark": "node scripts/benchmark.js"
+  }
+}

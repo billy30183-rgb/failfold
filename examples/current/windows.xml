@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="windows.xml" tests="94" failures="76" errors="0">
+<testcase classname="demo.Component0" name="case_0"><failure type="ConnectionError" message="Connection refused: fixture database on localhost:5432">Fixture startup failed
+  at connect (src/db/client.js:42:9)
+  at setup (tests/shared/fixture.js:18:3)</failure></testcase>
+<testcase classname="demo.Component0" name="case_1"><failure type="ConnectionError" message="Connection refused: fixture database on localhost:5432">Fixture startup failed
+  at connect (src/db/client.js:42:9)
+  at setup (tests/shared/fixture.js:18:3)</failure></testcase>
+<testcase classname="demo.Component0" name="case_2"><failure type="ConnectionError" message="Connection refused: fixture database on localhost:5432">Fixture startup failed
+  at connect (src/db/client.js:42:9)
+  at setup (tests/shared/fixture.js:18:3)</failure></testcase>
+<testcase classname="demo.Component0" name="case_3"><failure type="ConnectionError" message="Connection refused: fixture database on localhost:5432">Fixture startup failed
+  at connect (src/db/client.js:42:9)
+  at setup (tests/shared/fixture.js:18:3)</failure></testcase>
+<testcase classname="demo.Component0" name="case_4"><failure type="ConnectionError" message="Connection refused: fixture database on localhost:5432">Fixture startup failed
+  at connect (src/db/client.js:42:9)
+  at setup (tests/shared/fixture.js:18:3)</failure></testcase>
+<testcase classname="demo.Component0" name="case_5"><failure type="ConnectionError" message="Connection refused: fixture database on localhost:5432">Fixture startup failed
+  at connect (src/db/client.js:42:9)
+  at setup (tests/shared/fixture.js:18:3)</failure></testcase>
+<testcase classname="demo.Component0" name="case_6"><failure type="ConnectionError" message="Connection refused: fixture database on localhost:5432">Fixture startup failed
+  at connect (src/db/client.js:42:9)
+  at setup (tests/shared/fixture.js:18:3)</failure></testcase>
+<testcase classname="demo.Component0" name="case_7"><failure type="ConnectionError" message="Connection refused: fixture database on localhost:5432">Fixture startup failed
+  at connect (src/db/client.js:42:9)
+  at setup (tests/shared/fixture.js:18:3)</failure></testcase>
+<testcase classname="demo.Component0" name="case_8"><failure type="ConnectionError" message="Connection refused: fixture database on localhost:5432">Fixture startup failed
+  at connect (src/db/client.js:42:9)
+  at setup (tests/shared/fixture.js:18:3)</failure></testcase>
+<testcase classname="demo.Component0" name="case_9"><failure type="ConnectionError" message="Connection refused: fixture database on localhost:5432">Fixture startup failed
+  at connect (src/db/client.js:42:9)
+  at setup (tests/shared/fixture.js:18:3)</failure></testcase>
+<testcase classname="demo.Component0" name="case_10"><failure type="ConnectionError" message="Connection refused: fixture database on localhost:5432">Fixture startup failed
+  at connect (src/db/client.js:42:9)
+  at setup (tests/shared/fixture.js:18:3)</failure></testcase>
+<testcase classname="demo.Component0" name="case_11"><failure type="ConnectionError" message="Connection refused: fixture database on localhost:5432">Fixture startup failed
+  at connect (src/db/client.js:42:9)
+  at setup (tests/shared/fixture.js:18:3)</failure></testcase>
+<testcase classname="demo.Component0" name="case_12"><failure type="ConnectionError" message="Connection refused: fixture database on localhost:5432">Fixture startup failed
+  at connect (src/db/client.js:42:9)
+  at setup (tests/shared/fixture.js:18:3)</failure></testcase>
+<testcase classname="demo.Component0" name="case_13"><failure type="ConnectionError" message="Connection refused: fixture database on localhost:5432">Fixture startup failed
+  at connect (src/db/client.js:42:9)
+  at setup (tests/shared/fixture.js:18:3)</failure></testcase>
+<testcase classname="demo.Component0" name="case_14"><failure type="ConnectionError" message="Connection refused: fixture database on localhost:5432">Fixture startup failed
+  at connect (src/db/client.js:42:9)
+  at setup (tests/shared/fixture.js:18:3)</failure></testcase>
+<testcase classname="demo.Component0" name="case_15"><failure type="ConnectionError" message="Connection refused: fixture database on localhost:5432">Fixture startup failed
+  at connect (src/db/client.js:42:9)
+  at setup (tests/shared/fixture.js:18:3)</failure></testcase>
+<testcase classname="demo.Component0" name="case_16"><failure type="ConnectionError" message="Connection refused: fixture database on localhost:5432">Fixture startup failed
+  at connect (src/db/client.js:42:9)
+  at setup (tests/shared/fixture.js:18:3)</failure></testcase>
+<testcase classname="demo.Component0" name="case_17"><failure type="ConnectionError" message="Connection refused: fixture database on localhost:5432">Fixture startup failed
+  at connect (src/db/client.js:42:9)
+  at setup (tests/shared/fixture.js:18:3)</failure></testcase>
+<testcase classname="demo.Component0" name="case_18"><failure type="ConnectionError" message="Connection refused: fixture database on localhost:5432">Fixture startup failed
+  at connect (src/db/client.js:42:9)
+  at setup (tests/shared/fixture.js:18:3)</failure></testcase>
+<testcase classname="demo.Component0" name="case_19"><failure type="ConnectionError" message="Connection refused: fixture database on localhost:5432">Fixture startup failed
+  at connect (src/db/client.js:42:9)
+  at setup (tests/shared/fixture.js:18:3)</failure></testcase>
+<testcase classname="demo.Component0" name="case_20"><failure type="ConnectionError" message="Connection refused: fixture database on localhost:5432">Fixture startup failed
+  at connect (src/db/client.js:42:9)
+  at setup (tests/shared/fixture.js:18:3)</failure></testcase>
+<testcase classname="demo.Component0" name="case_21"><failure type="ConnectionError" message="Connection refused: fixture database on localhost:5432">Fixture startup failed
+  at connect (src/db/client.js:42:9)
+  at setup (tests/shared/fixture.js:18:3)</failure></testcase>
+<testcase classname="demo.Component0" name="case_22"><failure type="ConnectionError" message="Connection refused: fixture database on localhost:5432">Fixture startup failed
+  at connect (src/db/client.js:42:9)
+  at setup (tests/shared/fixture.js:18:3)</failure></testcase>
+<testcase classname="demo.Component0" name="case_23"><failure type="ConnectionError" message="Connection refused: fixture database on localhost:5432">Fixture startup failed
+  at connect (src/db/client.js:42:9)
+  at setup (tests/shared/fixture.js:18:3)</failure></testcase>
+<testcase classname="demo.Component0" name="case_24"><failure type="ConnectionError" message="Connection refused: fixture database on localhost:5432">Fixture startup failed
+  at connect (src/db/client.js:42:9)
+  at setup (tests/shared/fixture.js:18:3)</failure></testcase>
+<testcase classname="demo.Component0" name="case_25"><failure type="ConnectionError" message="Connection refused: fixture database on localhost:5432">Fixture startup failed
+  at connect (src/db/client.js:42:9)
+  at setup (tests/shared/fixture.js:18:3)</failure></testcase>
+<testcase classname="demo.Component0" name="case_26"><failure type="ConnectionError" message="Connection refused: fixture database on localhost:5432">Fixture startup failed
+  at connect (src/db/client.js:42:9)
+  at setup (tests/shared/fixture.js:18:3)</failure></testcase>
+<testcase classname="demo.Component0" name="case_27"><failure type="ConnectionError" message="Connection refused: fixture database on localhost:5432">Fixture startup failed
+  at connect (src/db/client.js:42:9)
+  at setup (tests/shared/fixture.js:18:3)</failure></testcase>
+<testcase classname="demo.Component0" name="case_28"><failure type="ConnectionError" message="Connection refused: fixture database on localhost:5432">Fixture startup failed
+  at connect (src/db/client.js:42:9)
+  at setup (tests/shared/fixture.js:18:3)</failure></testcase>
+<testcase classname="demo.Component0" name="case_29"><failure type="ConnectionError" message="Connection refused: fixture database on localhost:5432">Fixture startup failed
+  at connect (src/db/client.js:42:9)
+  at setup (tests/shared/fixture.js:18:3)</failure></testcase>
+<testcase classname="demo.Component0" name="case_30"><failure type="ConnectionError" message="Connection refused: fixture database on localhost:5432">Fixture startup failed
+  at connect (src/db/client.js:42:9)
+  at setup (tests/shared/fixture.js:18:3)</failure></testcase>
+<testcase classname="demo.Component0" name="case_31"><failure type="ConnectionError" message="Connection refused: fixture database on localhost:5432">Fixture startup failed
+  at connect (src/db/client.js:42:9)
+  at setup (tests/shared/fixture.js:18:3)</failure></testcase>
+<testcase classname="demo.Component0" name="case_32"><failure type="ConnectionError" message="Connection refused: fixture database on localhost:5432">Fixture startup failed
+  at connect (src/db/client.js:42:9)
+  at setup (tests/shared/fixture.js:18:3)</failure></testcase>
+<testcase classname="demo.Component0" name="case_33"><failure type="ConnectionError" message="Connection refused: fixture database on localhost:5432">Fixture startup failed
+  at connect (src/db/client.js:42:9)
+  at setup (tests/shared/fixture.js:18:3)</failure></testcase>
+<testcase classname="demo.Component0" name="case_34"><failure type="ConnectionError" message="Connection refused: fixture database on localhost:5432">Fixture startup failed
+  at connect (src/db/client.js:42:9)
+  at setup (tests/shared/fixture.js:18:3)</failure></testcase>
+<testcase classname="demo.Component0" name="case_35"><failure type="ConnectionError" message="Connection refused: fixture database on localhost:5432">Fixture startup failed
+  at connect (src/db/client.js:42:9)
+  at setup (tests/shared/fixture.js:18:3)</failure></testcase>
+<testcase classname="demo.Component0" name="case_36"><failure type="ConnectionError" message="Connection refused: fixture database on localhost:5432">Fixture startup failed
+  at connect (src/db/client.js:42:9)
+  at setup (tests/shared/fixture.js:18:3)</failure></testcase>
+<testcase classname="demo.Component0" name="case_37"><failure type="ConnectionError" message="Connection refused: fixture database on localhost:5432">Fixture startup failed
+  at connect (src/db/client.js:42:9)
+  at setup (tests/shared/fixture.js:18:3)</failure></testcase>
+<testcase classname="demo.Component0" name="case_38"><failure type="ConnectionError" message="Connection refused: fixture database on localhost:5432">Fixture startup failed
+  at connect (src/db/client.js:42:9)
+  at setup (tests/shared/fixture.js:18:3)</failure></testcase>
+<testcase classname="demo.Component0" name="case_39"><failure type="ConnectionError" message="Connection refused: fixture database on localhost:5432">Fixture startup failed
+  at connect (src/db/client.js:42:9)
+  at setup (tests/shared/fixture.js:18:3)</failure></testcase>
+<testcase classname="demo.Component0" name="case_40"><failure type="ConnectionError" message="Connection refused: fixture database on localhost:5432">Fixture startup failed
+  at connect (src/db/client.js:42:9)
+  at setup (tests/shared/fixture.js:18:3)</failure></testcase>
+<testcase classname="demo.Component0" name="case_41"><failure type="ConnectionError" message="Connection refused: fixture database on localhost:5432">Fixture startup failed
+  at connect (src/db/client.js:42:9)
+  at setup (tests/shared/fixture.js:18:3)</failure></testcase>
+<testcase classname="demo.Component0" name="case_42"><failure type="ConnectionError" message="Connection refused: fixture database on localhost:5432">Fixture startup failed
+  at connect (src/db/client.js:42:9)
+  at setup (tests/shared/fixture.js:18:3)</failure></testcase>
+<testcase classname="demo.Component0" name="case_43"><failure type="ConnectionError" message="Connection refused: fixture database on localhost:5432">Fixture startup failed
+  at connect (src/db/client.js:42:9)
+  at setup (tests/shared/fixture.js:18:3)</failure></testcase>
+<testcase classname="demo.Component0" name="case_44"><failure type="ConnectionError" message="Connection refused: fixture database on localhost:5432">Fixture startup failed
+  at connect (src/db/client.js:42:9)
+  at setup (tests/shared/fixture.js:18:3)</failure></testcase>
+<testcase classname="demo.Component0" name="case_45"><failure type="ConnectionError" message="Connection refused: fixture database on localhost:5432">Fixture startup failed
+  at connect (src/db/client.js:42:9)
+  at setup (tests/shared/fixture.js:18:3)</failure></testcase>
+<testcase classname="demo.Component0" name="case_46"><failure type="ConnectionError" message="Connection refused: fixture database on localhost:5432">Fixture startup failed
+  at connect (src/db/client.js:42:9)
+  at setup (tests/shared/fixture.js:18:3)</failure></testcase>
+<testcase classname="demo.Component0" name="case_47"><failure type="ConnectionError" message="Connection refused: fixture database on localhost:5432">Fixture startup failed
+  at connect (src/db/client.js:42:9)
+  at setup (tests/shared/fixture.js:18:3)</failure></testcase>
+<testcase classname="demo.Component0" name="case_48"><failure type="ConnectionError" message="Connection refused: fixture database on localhost:5432">Fixture startup failed
+  at connect (src/db/client.js:42:9)
+  at setup (tests/shared/fixture.js:18:3)</failure></testcase>
+<testcase classname="demo.Component0" name="case_49"><failure type="ConnectionError" message="Connection refused: fixture database on localhost:5432">Fixture startup failed
+  at connect (src/db/client.js:42:9)
+  at setup (tests/shared/fixture.js:18:3)</failure></testcase>
+<testcase classname="demo.Component1" name="case_50"><failure type="AssertionError" message="Expected status 200, received 503">Response validation failed
+  at assertStatus (tests/helpers/http.js:27:5)</failure></testcase>
+<testcase classname="demo.Component1" name="case_51"><failure type="AssertionError" message="Expected status 200, received 503">Response validation failed
+  at assertStatus (tests/helpers/http.js:27:5)</failure></testcase>
+<testcase classname="demo.Component1" name="case_52"><failure type="AssertionError" message="Expected status 200, received 503">Response validation failed
+  at assertStatus (tests/helpers/http.js:27:5)</failure></testcase>
+<testcase classname="demo.Component1" name="case_53"><failure type="AssertionError" message="Expected status 200, received 503">Response validation failed
+  at assertStatus (tests/helpers/http.js:27:5)</failure></testcase>
+<testcase classname="demo.Component1" name="case_54"><failure type="AssertionError" message="Expected status 200, received 503">Response validation failed
+  at assertStatus (tests/helpers/http.js:27:5)</failure></testcase>
+<testcase classname="demo.Component1" name="case_55"><failure type="AssertionError" message="Expected status 200, received 503">Response validation failed
+  at assertStatus (tests/helpers/http.js:27:5)</failure></testcase>
+<testcase classname="demo.Component1" name="case_56"><failure type="AssertionError" message="Expected status 200, received 503">Response validation failed
+  at assertStatus (tests/helpers/http.js:27:5)</failure></testcase>
+<testcase classname="demo.Component1" name="case_57"><failure type="AssertionError" message="Expected status 200, received 503">Response validation failed
+  at assertStatus (tests/helpers/http.js:27:5)</failure></testcase>
+<testcase classname="demo.Component1" name="case_58"><failure type="AssertionError" message="Expected status 200, received 503">Response validation failed
+  at assertStatus (tests/helpers/http.js:27:5)</failure></testcase>
+<testcase classname="demo.Component1" name="case_59"><failure type="AssertionError" message="Expected status 200, received 503">Response validation failed
+  at assertStatus (tests/helpers/http.js:27:5)</failure></testcase>
+<testcase classname="demo.Component1" name="case_60"><failure type="AssertionError" message="Expected status 200, received 503">Response validation failed
+  at assertStatus (tests/helpers/http.js:27:5)</failure></testcase>
+<testcase classname="demo.Component1" name="case_61"><failure type="AssertionError" message="Expected status 200, received 503">Response validation failed
+  at assertStatus (tests/helpers/http.js:27:5)</failure></testcase>
+<testcase classname="demo.Component1" name="case_62"><failure type="AssertionError" message="Expected status 200, received 503">Response validation failed
+  at assertStatus (tests/helpers/http.js:27:5)</failure></testcase>
+<testcase classname="demo.Component1" name="case_63"><failure type="AssertionError" message="Expected status 200, received 503">Response validation failed
+  at assertStatus (tests/helpers/http.js:27:5)</failure></testcase>
+<testcase classname="demo.Component1" name="case_64"><failure type="AssertionError" message="Expected status 200, received 503">Response validation failed
+  at assertStatus (tests/helpers/http.js:27:5)</failure></testcase>
+<testcase classname="demo.Component1" name="case_65"><failure type="AssertionError" message="Expected status 200, received 503">Response validation failed
+  at assertStatus (tests/helpers/http.js:27:5)</failure></testcase>
+<testcase classname="demo.Component1" name="case_66"><failure type="AssertionError" message="Expected status 200, received 503">Response validation failed
+  at assertStatus (tests/helpers/http.js:27:5)</failure></testcase>
+<testcase classname="demo.Component1" name="case_67"><failure type="AssertionError" message="Expected status 200, received 503">Response validation failed
+  at assertStatus (tests/helpers/http.js:27:5)</failure></testcase>
+<testcase classname="demo.Component1" name="case_68"><failure type="AssertionError" message="Expected status 200, received 503">Response validation failed
+  at assertStatus (tests/helpers/http.js:27:5)</failure></testcase>
+<testcase classname="demo.Component1" name="case_69"><failure type="AssertionError" message="Expected status 200, received 503">Response validation failed
+  at assertStatus (tests/helpers/http.js:27:5)</failure></testcase>
+<testcase classname="demo.Component2" name="case_70"><failure type="ModuleNotFoundError" message="No module named 'demo_optional_codec'">Import failed in shared setup
+  File &quot;tests/shared/plugins.py&quot;, line 12</failure></testcase>
+<testcase classname="demo.Component2" name="case_71"><failure type="ModuleNotFoundError" message="No module named 'demo_optional_codec'">Import failed in shared setup
+  File &quot;tests/shared/plugins.py&quot;, line 12</failure></testcase>
+<testcase classname="demo.Component2" name="case_72"><failure type="ModuleNotFoundError" message="No module named 'demo_optional_codec'">Import failed in shared setup
+  File &quot;tests/shared/plugins.py&quot;, line 12</failure></testcase>
+<testcase classname="demo.Component2" name="case_73"><failure type="ModuleNotFoundError" message="No module named 'demo_optional_codec'">Import failed in shared setup
+  File &quot;tests/shared/plugins.py&quot;, line 12</failure></testcase>
+<testcase classname="demo.Component2" name="case_74"><failure type="ModuleNotFoundError" message="No module named 'demo_optional_codec'">Import failed in shared setup
+  File &quot;tests/shared/plugins.py&quot;, line 12</failure></testcase>
+<testcase classname="demo.Component2" name="case_75"><failure type="ModuleNotFoundError" message="No module named 'demo_optional_codec'">Import failed in shared setup
+  File &quot;tests/shared/plugins.py&quot;, line 12</failure></testcase>
+<testcase classname="demo.Healthy" name="passed_0"/>
+<testcase classname="demo.Healthy" name="passed_1"/>
+<testcase classname="demo.Healthy" name="passed_2"/>
+<testcase classname="demo.Healthy" name="passed_3"/>
+<testcase classname="demo.Healthy" name="passed_4"/>
+<testcase classname="demo.Healthy" name="passed_5"/>
+<testcase classname="demo.Healthy" name="passed_6"/>
+<testcase classname="demo.Healthy" name="passed_7"/>
+<testcase classname="demo.Healthy" name="passed_8"/>
+<testcase classname="demo.Healthy" name="passed_9"/>
+<testcase classname="demo.Healthy" name="passed_10"/>
+<testcase classname="demo.Healthy" name="passed_11"/>
+<testcase classname="demo.Healthy" name="passed_12"/>
+<testcase classname="demo.Healthy" name="passed_13"/>
+<testcase classname="demo.Healthy" name="passed_14"/>
+<testcase classname="demo.Optional" name="skipped_0"><skipped/></testcase>
+<testcase classname="demo.Optional" name="skipped_1"><skipped/></testcase>
+<testcase classname="demo.Optional" name="skipped_2"><skipped/></testcase>
+</testsuite>

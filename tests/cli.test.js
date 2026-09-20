@@ -1,0 +1,38 @@
+'use strict';
+const test=require('node:test'),assert=require('node:assert/strict'),fs=require('node:fs'),os=require('node:os'),path=require('node:path'),cp=require('node:child_process');
+const cli=path.resolve(__dirname,'../src/cli.js');
+const run=(args,cwd)=>cp.spawnSync(process.execPath,[cli,...args],{cwd,encoding:'utf8'});
+const xml=(body='')=>`<testsuite><testcase name="t">${body}</testcase></testsuite>`;
+const bad='<failure message="oops">trace</failure>';
+function env(t){const p=fs.mkdtempSync(path.join(os.tmpdir(),'failfold-'));t.after(()=>fs.rmSync(p,{recursive:true,force:true}));fs.writeFileSync(path.join(p,'now.xml'),xml(bad));fs.writeFileSync(path.join(p,'base.xml'),xml(''));return p;}
+test('CLI help needs no files',()=>assert.equal(run(['--help']).status,0));
+test('CLI no args returns usage error',()=>assert.equal(run([]).status,2));
+test('CLI produces actual JSON and Markdown',t=>{const p=env(t),r=run(['now.xml','--baseline','base.xml','--output','r.md','--json','r.json'],p);assert.equal(r.status,0,r.stderr);assert.equal(JSON.parse(fs.readFileSync(path.join(p,'r.json'))).summary.newGroups,1);assert.ok(fs.readFileSync(path.join(p,'r.md'),'utf8').includes('1 signature groups'));});
+test('CLI gate exits 1 for new signature',t=>{const p=env(t);assert.equal(run(['now.xml','--baseline','base.xml','--fail-on-new'],p).status,1);});
+test('CLI gate requires baseline',t=>assert.equal(run(['now.xml','--fail-on-new'],env(t)).status,2));
+test('CLI gate exits 2 for uninformative evidence',t=>{const p=env(t);fs.writeFileSync(path.join(p,'now.xml'),xml('<failure/>'));assert.equal(run(['now.xml','--baseline','base.xml','--fail-on-new'],p).status,2);});
+test('CLI failure gate exits 1 even without baseline',t=>assert.equal(run(['now.xml','--fail-on-failure'],env(t)).status,1));
+test('CLI will not overwrite existing outputs by default',t=>{const p=env(t);fs.writeFileSync(path.join(p,'r.md'),'preserve');assert.equal(run(['now.xml','--output','r.md'],p).status,2);assert.equal(fs.readFileSync(path.join(p,'r.md'),'utf8'),'preserve');});
+test('CLI explicit force only overwrites designated output',t=>{const p=env(t);fs.writeFileSync(path.join(p,'r.md'),'old');assert.equal(run(['now.xml','--output','r.md','--force'],p).status,0);});
+test('CLI never overwrites an input, even with force',t=>{const p=env(t),before=fs.readFileSync(path.join(p,'now.xml'));assert.equal(run(['now.xml','--output','now.xml','--force'],p).status,2);assert.deepEqual(fs.readFileSync(path.join(p,'now.xml')),before);});
+test('CLI hard-link output cannot overwrite source',t=>{const p=env(t);fs.linkSync(path.join(p,'now.xml'),path.join(p,'alias.md'));assert.equal(run(['now.xml','--output','alias.md','--force'],p).status,2);});
+test('CLI duplicate source path rejected',t=>assert.equal(run(['now.xml','now.xml'],env(t)).status,2));
+test('CLI output paths must differ',t=>assert.equal(run(['now.xml','--output','r.md','--json','r.md'],env(t)).status,2));
+test('CLI malformed XML leaves no report artifact',t=>{const p=env(t);fs.writeFileSync(path.join(p,'now.xml'),'<testsuite>');assert.equal(run(['now.xml','--output','r.md'],p).status,2);assert.equal(fs.existsSync(path.join(p,'r.md')),false);});
+test('CLI rejects invalid UTF-8',t=>{const p=env(t);fs.writeFileSync(path.join(p,'now.xml'),Buffer.from([0xff,0xfe,0,0]));assert.equal(run(['now.xml'],p).status,2);});
+test('CLI recursively finds only XML files in a selected directory',t=>{const p=env(t);fs.mkdirSync(path.join(p,'reports/sub'),{recursive:true});fs.writeFileSync(path.join(p,'reports/sub/one.xml'),xml(bad));fs.writeFileSync(path.join(p,'reports/ignored.txt'),'not xml');const r=run(['reports','--json','r.json'],p);assert.equal(r.status,0);assert.equal(JSON.parse(fs.readFileSync(path.join(p,'r.json'))).counts.files,1);});
+test('CLI empty reports directory is not successful analysis',t=>{const p=env(t);fs.mkdirSync(path.join(p,'empty'));assert.equal(run(['empty'],p).status,2);});
+test('CLI supports names with spaces and Unicode',t=>{const p=env(t);fs.renameSync(path.join(p,'now.xml'),path.join(p,'測試 報告.xml'));assert.equal(run(['測試 報告.xml'],p).status,0);});
+test('actual Node JUnit exporter output can be analyzed',t=>{
+  const p=env(t),src="const test=require('node:test');const assert=require('node:assert/strict');test('pass',()=>{});test('fail',()=>assert.equal(1,2));test.skip('skip',()=>{});";
+  fs.writeFileSync(path.join(p,'exporter.cjs'),src);
+  const exporterEnv={...process.env};delete exporterEnv.NODE_TEST_CONTEXT;
+  const emitted=cp.spawnSync(process.execPath,['--test','--test-reporter=junit','exporter.cjs'],{cwd:p,encoding:'utf8',env:exporterEnv});
+  assert.equal(emitted.status,1);assert.ok(emitted.stdout.includes('<testsuites'));
+  fs.writeFileSync(path.join(p,'actual-export.xml'),emitted.stdout);
+  const result=run(['actual-export.xml','--json','export-analysis.json','--output','export-analysis.md'],p);
+  assert.equal(result.status,0,result.stderr);
+  const r=JSON.parse(fs.readFileSync(path.join(p,'export-analysis.json')));
+  assert.equal(r.counts.tests,3);assert.equal(r.counts.failedCases,1);assert.equal(r.counts.skipped,1);assert.equal(r.summary.groups,1);
+});
+test('CLI refuses hard-linked output pair before writing',t=>{const p=env(t);fs.writeFileSync(path.join(p,'r.md'),'preserve');fs.linkSync(path.join(p,'r.md'),path.join(p,'r.json'));const r=run(['now.xml','--output','r.md','--json','r.json','--force'],p);assert.equal(r.status,2);assert.equal(fs.readFileSync(path.join(p,'r.md'),'utf8'),'preserve');});
