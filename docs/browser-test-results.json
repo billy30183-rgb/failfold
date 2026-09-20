@@ -1,6 +1,6 @@
 {
   "passed": 17,
-  "harness": "file URL navigation then offline",
+  "harness": "HTTP navigation then offline",
   "results": [
     {
       "name": "standalone HTML runs with network disabled (see harness metadata)",

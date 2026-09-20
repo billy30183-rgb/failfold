@@ -1,6 +1,6 @@
 # FailFold：繁體中文快速開始
 
-這是已可執行、尚未公開上架的 v0.1.0 候選版，不是空白專案或僅供展示的設計圖。
+FailFold 已公開部署：[直接試用](https://billy30183-rgb.github.io/failfold/) · [原始碼](https://github.com/billy30183-rgb/failfold)。
 
 ## 先看效果
 
@@ -12,7 +12,7 @@
 python -m http.server 8000 --bind 127.0.0.1 --directory dist
 ```
 
-再開啟 `http://127.0.0.1:8000/`。只提供 `dist` 靜態檔案；XML 由瀏覽器自行讀取，不會上傳給這個伺服器。Windows 上已用 Playwright 1.57 驅動 Microsoft Edge 153，完成 17 項 HTTP 瀏覽器驗收。另以實際 file URL 導覽通過同樣 17 項驗收（並非真人雙擊操作）；正式網址尚未部署；詳見 [Windows 驗證紀錄](docs/WINDOWS-VERIFICATION.md)。
+再開啟 `http://127.0.0.1:8000/`。只提供 `dist` 靜態檔案；XML 由瀏覽器自行讀取，不會上傳給這個伺服器。Windows 上已用 Playwright 1.57 驅動 Microsoft Edge 153，完成 17 項 HTTP 瀏覽器驗收。另以實際 file URL 導覽通過同樣 17 項驗收（並非真人雙擊操作）；正式網址也已通過 17 項驗收；詳見 [Windows 驗證紀錄](docs/WINDOWS-VERIFICATION.md)。
 
 內建示範是刻意製作的合成資料：240 筆失敗收斂成 3 組相同特徵，其中 1 組相較提供的基準新增。這不是 3 個已證明的根本原因，也不是實測省時 98.8%。
 
@@ -36,7 +36,7 @@ npm.cmd run build
 
 Windows 的 PowerShell 遇到 `npm.ps1` 執行政策限制時，可用 `npm.cmd`。瀏覽器測試另需 Python 與 Playwright；參見 README。
 
-目前 Windows 驗證已通過 73 項 Node 測試，以及上述 17 項 HTTP 瀏覽器驗收。這仍是尚未公開部署、遠端 CI 尚未執行的候選版；實際本機檔案網址導覽亦已通過 17 項驗收。
+目前 Windows 驗證已通過 73 項 Node 測試，以及上述 17 項 HTTP 瀏覽器驗收。Windows/Linux 與 Chromium 遠端 CI 已通過，Pages 已部署；實際本機檔案網址導覽亦已通過 17 項驗收。
 
 匯出的報告可能包含秘密或個資，分享前務必檢查。程式不做自動遮罩，不應把「本機處理」誤當「輸出的檔案適合公開」。
 

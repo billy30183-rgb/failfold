@@ -12,4 +12,4 @@ Vendored parser: `@xmldom/xmldom` 0.9.12, unmodified MIT. Its official npm tarba
 
 ## Reporting a vulnerability
 
-This is an unpublished candidate and no private reporting endpoint has been configured. The maintainer must enable and document a private reporting channel before public launch. Do not send secrets to a placeholder address or file a public exploitable proof containing private data. A sanitized minimal reproduction, affected version and expected/actual behavior are useful for responsible review.
+Private vulnerability reporting is enabled on GitHub. Use [Report a vulnerability](https://github.com/billy30183-rgb/failfold/security/advisories/new) for sensitive security reports. Do not send secrets to a placeholder address or file a public exploitable proof containing private data. A sanitized minimal reproduction, affected version and expected/actual behavior are useful for responsible review.

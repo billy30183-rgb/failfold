@@ -18,7 +18,9 @@ Retain matched baseline records in JSON/Markdown; normalize colon-form ANSI SGR 
 
 The vendored XML parser was updated from 0.9.8 to verified, unmodified 0.9.12 because of published upstream security advisories. See VENDOR-VERIFICATION.md. MIT notices remain in source and the built single-file app.
 
-## Publication status and limits
+## Publication status at local handoff and limits
+
+Subsequent authorized publication is recorded in [PUBLICATION-VERIFICATION.md](PUBLICATION-VERIFICATION.md). The paragraph below preserves the earlier local-only status.
 
 No FailFold public repository, remote CI, Pages deployment or release has been created in this verification. The workflow is prepared with pinned official action commits; deployment depends on both Windows/Linux core checks and browser checks of the same commit. Only dist is uploaded, only main deploys, and PR jobs have read-only contents permission. Remote execution remains unverified.
 

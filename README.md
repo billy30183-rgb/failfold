@@ -3,7 +3,9 @@
 
 Fold matching failure records from local JUnit XML reports into an evidence-preserving reading list. Compare a supplied baseline, inspect every source occurrence, and export Markdown or JSON. Browser and Node CLI use the **same parser and grouping engine**.
 
-**Status: locally tested v0.1.0 candidate. Not yet publicly deployed or published to npm.**
+**[Live demo](https://billy30183-rgb.github.io/failfold/) · [GitHub](https://github.com/billy30183-rgb/failfold)**
+
+Public static site verified on 2026-09-20. No npm package is published.
 
 [繁體中文快速開始](START_HERE.zh-TW.md) · [Verification](docs/VERIFICATION.md) · [Windows verification](docs/WINDOWS-VERIFICATION.md) · [Security](SECURITY.md) · [Compatibility](docs/COMPATIBILITY.md)
 
@@ -92,7 +94,7 @@ npm run test:browser
 
 `PLAYWRIGHT_CHROMIUM_EXECUTABLE` optionally selects an installed Chromium. `LIVE_URL` optionally selects an authorized deployed page for navigation acceptance. Normal tests navigate first, then disable network. `FAILFOLD_IN_MEMORY_TEST=1` is an explicit restricted-environment fallback, **not** evidence that file, HTTP or deployed navigation works.
 
-The current Windows results show **73 Node tests passed** and **17 HTTP browser acceptance checks passed** with Microsoft Edge 153 through Playwright 1.57; browser/CLI demo exports agree. A separate 17-check run also passed through actual file URL navigation. See the new [Windows verification record](docs/WINDOWS-VERIFICATION.md); the earlier [verification record](docs/VERIFICATION.md) remains historical context. The included CI workflow is prepared but has not run remotely, and the candidate is not publicly deployed.
+The current Windows results show **73 Node tests passed** and **17 HTTP browser acceptance checks passed** with Microsoft Edge 153 through Playwright 1.57; browser/CLI demo exports agree. A separate 17-check run also passed through actual file URL navigation. See the new [Windows verification record](docs/WINDOWS-VERIFICATION.md); the earlier [verification record](docs/VERIFICATION.md) remains historical context. Windows/Linux CI and Chromium acceptance passed before deployment. The public Pages site also passed all 17 navigation acceptance checks; see [publication verification](docs/PUBLICATION-VERIFICATION.md).
 
 `npm run build` rebuilds the single HTML file and synthetic demo fixtures deterministically from checked-in source. `npm run benchmark` records a synthetic 10,000-failure parse/group benchmark; timings vary by host and exclude human triage.
 
