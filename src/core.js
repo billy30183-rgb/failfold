@@ -4,7 +4,7 @@
   else root.FailFold = factory(root.FailFoldXML.DOMParser);
 })(globalThis, function (DOMParser) {
   'use strict';
-  const VERSION = '0.1.0';
+  const VERSION = '0.1.1';
   const LIMITS = Object.freeze({ files: 100, fileBytes: 5 * 1024 * 1024, totalBytes: 20 * 1024 * 1024, cases: 50000, results: 50000, elements: 250000, depth: 64 });
   const byteLength = s => new TextEncoder().encode(s).length;
   const cmp = (a,b) => a < b ? -1 : a > b ? 1 : 0;

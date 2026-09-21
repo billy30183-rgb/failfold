@@ -1,9 +1,9 @@
-# FailFold v0.1.0
+# FailFold v0.1.1
 
-Group matching JUnit XML failure signatures locally, compare an optional baseline, inspect original occurrences, and export Markdown or JSON. The standalone browser page and Node CLI share the same engine. No accounts, uploads, telemetry or AI inference.
+This patch release keeps the existing parser, grouping, reports and browser behavior unchanged while fixing two CLI argument/path edge cases.
 
-The synthetic demonstration folds 240 failure records into 3 signature groups. This reduces reading entries, not a measured amount of debugging time; matching signatures do not prove a shared root cause.
+- `--` now ends option parsing before filenames such as `--help`, so help-like report names can be analyzed explicitly.
+- Output validation now rejects dangling symlinks before analysis or writing, including when `--force` is supplied. This closes the gap where a forced write could follow a dangling file symlink and create its target.
+- Regression coverage exercises both behaviors, including a Windows junction fallback when file-symlink creation is unavailable.
 
-Includes exact and opt-in formatting modes, source preservation including matching baseline records, malformed/unsupported XML rejection, input limits, cancellable browser analysis, and CLI overwrite safeguards. Vendored xmldom 0.9.12 retains its MIT license.
-
-Known limits: only the documented JUnit subset is supported; exports can contain private information and are not automatically redacted. “Seen” is relative to the supplied baseline; “not observed” does not mean fixed. No npm package is published.
+The supported JUnit subset, input limits and privacy boundaries are unchanged. Exports can contain private information and are not automatically redacted. No npm package is published.

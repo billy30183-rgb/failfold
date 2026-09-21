@@ -1,6 +1,6 @@
 {
   "name": "@billy30183-rgb/failfold",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Local-first, evidence-preserving JUnit failure grouping and baseline comparison.",
   "type": "commonjs",
   "license": "MIT",

@@ -3,7 +3,9 @@
 const fs=require('node:fs'); const path=require('node:path'); const core=require('./core');
 function run(argv) {
   const usage=`FailFold ${core.VERSION}\nUsage: node src/cli.js <xml-file-or-directory>... [options]\n\n  --baseline PATH    Compare with XML file/directory (repeatable)\n  --mode MODE        exact (default) or formatting\n  --scope SCOPE      all (default) or class\n  --output FILE      Write Markdown (otherwise stdout)\n  --json FILE        Also write a complete JSON report\n  --fail-on-new      Exit 1 for a new signature; requires baseline\n  --fail-on-failure  Exit 1 for any current failure/error\n  --force           Allow overwriting output files, never input files\n  --help            Show this help\n\nExit 0: analyzed successfully (unless a selected gate failed).\nExit 1: a selected gate failed. Exit 2: invalid/incomplete/inconclusive input.\nFiles are read locally. Symlinks, non-UTF-8 input, DTDs and unsupported retry extensions are rejected.\n`;
-  if(argv.includes('--help')||argv.includes('-h')){process.stdout.write(usage);return 0;}
+  const optionEnd=argv.indexOf('--');
+  const optionArgs=argv.slice(0,optionEnd<0?argv.length:optionEnd);
+  if(optionArgs.includes('--help')||optionArgs.includes('-h')){process.stdout.write(usage);return 0;}
   const input=[],base=[],opts={};let output=null,json=null,gate=null,force=false;
   for(let i=0;i<argv.length;i++) {
     const v=argv[i];
@@ -33,11 +35,12 @@ function run(argv) {
   input.forEach(p=>collect(p,paths));base.forEach(p=>collect(p,basePaths));
   const outputs=[output,json].filter(Boolean).map(p=>path.resolve(p));
   if(new Set(outputs).size!==outputs.length)throw new Error('Markdown and JSON must use different output paths.');
+  for(const p of outputs) {const entry=fs.lstatSync(p,{throwIfNoEntry:false});if(entry&&entry.isSymbolicLink())throw new Error('Refusing symlink output.');}
   const outputFiles=outputs.filter(p=>fs.existsSync(p)).map(p=>fs.statSync(p));
   if(outputFiles.some((a,i)=>outputFiles.slice(i+1).some(b=>a.dev===b.dev&&a.ino===b.ino)))throw new Error('Markdown and JSON must not refer to the same file or hard link.');
   for(const p of outputs) {
     if(seen.has(p))throw new Error('Refusing to overwrite an input file.');
-    if(fs.existsSync(p)) {const os=fs.statSync(p);if([...seen].some(x=>{const ins=fs.statSync(x);return os.dev===ins.dev&&os.ino===ins.ino;}))throw new Error('Refusing to overwrite an input file or hard link.');if(fs.lstatSync(p).isSymbolicLink())throw new Error('Refusing symlink output.');if(!force)throw new Error('Output already exists; use a new name or --force.');}
+    if(fs.existsSync(p)) {const os=fs.statSync(p);if([...seen].some(x=>{const ins=fs.statSync(x);return os.dev===ins.dev&&os.ino===ins.ino;}))throw new Error('Refusing to overwrite an input file or hard link.');if(!force)throw new Error('Output already exists; use a new name or --force.');}
     if(!fs.statSync(path.dirname(p)).isDirectory())throw new Error('Output parent must exist.');
   }
   const decode=p=>({name:path.relative(process.cwd(),p).split(path.sep).join('/'),text:new TextDecoder('utf-8',{fatal:true}).decode(fs.readFileSync(p))});
